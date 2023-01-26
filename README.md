@@ -14,7 +14,7 @@
 Программист написал *класс Unlocker*, в котором хранятся поля от всех способов сразу:
 
 ```
-<i>class Unlocker {
+class Unlocker {
 
 private int mode; // режим
 
@@ -24,7 +24,7 @@ private String fingerprint; // на случай отпечатка пальца
 
 private String faceID; // на случай лица
 
-}</i>
+}
 ```
 
 Здесь **нарушен принцип SRP**: класс имеет несколько незаивисимых причин меняться.
@@ -36,17 +36,17 @@ private String faceID; // на случай лица
 
 1. **ImmutableList** — коллекция, которая никогда ни при каких обстоятельствах не меняется. 
 - *Методы:*
-- [x] <i>getSize ()
-- [x] get (int i)</i>
+- [x] getSize ()
+- [x] get (int i)
 
 
 2. **MutableList** — коллекция, которая допускает изменения. 
 - *Методы:*
-- [x] <i>getSize ()
+- [x] getSize ()
 - [x] get (int i)
 - [x] set (int i, T newValue)
 - [x] add (T newValue)
-- [x] remove (T value)</i>
+- [x] remove (T value)
 
 Реализуйте такую схему наследования между двумя этими классами, которая будет соответствовать принципу подстановки Лисков.
 
